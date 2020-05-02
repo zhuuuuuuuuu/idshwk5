@@ -1,7 +1,6 @@
 from sklearn.ensemble import RandomForestClassifier
 import math
 
-
 def Count_numbers(string):
     num=0
     for character in string:
@@ -17,6 +16,7 @@ def Calculate_entropy(string):
     return entropy
 
 clf = RandomForestClassifier(random_state=0)
+
 domainlist = []
 class Domain:
     def __init__(self,string,label):
