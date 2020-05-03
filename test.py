@@ -1,5 +1,6 @@
 from sklearn.ensemble import RandomForestClassifier
 import math
+import collections
 
 def Count_numbers(string):
     num=0
@@ -9,7 +10,7 @@ def Count_numbers(string):
     return num
 
 def Calculate_entropy(string):
-    Map=Counter(string)
+    Map=collections.Counter(string)
     entropy=0.0
     for val in Map.values():
         entropy-=val/len(string)*math.log(val/len(string))
@@ -69,5 +70,5 @@ def main():
     clf.fit(featureMatrix,labelList)
     predictData("test.txt","result.txt")
     
-if __name__=='__main__':
+if __name__ == '__main__':
     main()
